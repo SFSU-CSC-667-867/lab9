@@ -14,6 +14,8 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
+const webSocket = new WebSocket('ws://localhost:4000/websocket');
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
